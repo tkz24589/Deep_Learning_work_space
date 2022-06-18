@@ -1,5 +1,3 @@
-## [YOLO v5](https://github.com/ultralytics/yolov5)在医疗领域中消化内镜目标检测的应用
-
 ### YOLO v5训练自己数据集详细教程
 
 :bug: :bug: 现在YOLOv5 已经更新到6.0版本了，但是其训练方式同本Repo是一致的，只需要按照对应版本安装对应Python环境即可，其数据集的构建，配置文件的修改，训练方式等完全与本Repo一致！
@@ -185,16 +183,16 @@ $ python3 train.py --img-size 640 --batch-size 16 --epochs 300 --data ./data/sco
 
 开始训练后，查看`train*.jpg`图片查看训练数据，标签和数据增强，如果你的图像显示标签或数据增强不正确，你应该查看你的数据集的构建过程是否有问题
 
-<img width="1000" align="center" alt="Screen Shot 2020-04-01 at 11 44 26 AM" src="./readmepic/readme2/pic/train_batch0.jpg">
+<img width="1000" align="center" alt="Screen Shot 2020-04-01 at 11 44 26 AM" src="卷积神经网络/目标检测/yolo实现物体识别/yolo-v5实现猫头识别/test_batch0_gt.jpg">
 
 一个训练epoch完成后，查看`test_batch0_gt.jpg`查看batch 0 ground truth的labels
 
 
-<img width="1000" align="center" alt="Screen Shot 2020-04-01 at 11 44 26 AM" src="./readmepic/readme2/pic/test_batch0_gt.jpg">
+<img width="1000" align="center" alt="Screen Shot 2020-04-01 at 11 44 26 AM" src="卷积神经网络/目标检测/yolo实现物体识别/yolo-v5实现猫头识别/test_batch0_gt.jpg">
 
 查看`test_batch0_pred.jpg`查看test batch 0的预测
 
-<img width="1000" align="center" alt="Screen Shot 2020-04-01 at 11 44 26 AM" src="./readmepic/readme2/pic/test_batch0_pred.jpg">
+<img width="1000" align="center" alt="Screen Shot 2020-04-01 at 11 44 26 AM" src="卷积神经网络/目标检测/yolo实现物体识别/yolo-v5实现猫头识别/test_batch0_pred.jpg">
 
 训练的losses和评价指标被保存在Tensorboard和`results.txt`log文件。`results.txt`在训练结束后会被可视化为`results.png`
 
