@@ -183,16 +183,16 @@ $ python3 train.py --img-size 640 --batch-size 16 --epochs 300 --data ./data/sco
 
 开始训练后，查看`train*.jpg`图片查看训练数据，标签和数据增强，如果你的图像显示标签或数据增强不正确，你应该查看你的数据集的构建过程是否有问题
 
-<img width="1000" align="center" alt="Screen Shot 2020-04-01 at 11 44 26 AM" src="卷积神经网络/目标检测/yolo实现物体识别/yolo-v5实现猫头识别/test_batch0_gt.jpg">
+<img width="1000" align="center" alt="Screen Shot 2020-04-01 at 11 44 26 AM" src="test_batch0_gt.jpg">
 
 一个训练epoch完成后，查看`test_batch0_gt.jpg`查看batch 0 ground truth的labels
 
 
-<img width="1000" align="center" alt="Screen Shot 2020-04-01 at 11 44 26 AM" src="卷积神经网络/目标检测/yolo实现物体识别/yolo-v5实现猫头识别/test_batch0_gt.jpg">
+<img width="1000" align="center" alt="Screen Shot 2020-04-01 at 11 44 26 AM" src="test_batch0_gt.jpg">
 
 查看`test_batch0_pred.jpg`查看test batch 0的预测
 
-<img width="1000" align="center" alt="Screen Shot 2020-04-01 at 11 44 26 AM" src="卷积神经网络/目标检测/yolo实现物体识别/yolo-v5实现猫头识别/test_batch0_pred.jpg">
+<img width="1000" align="center" alt="Screen Shot 2020-04-01 at 11 44 26 AM" src="test_batch0_pred.jpg">
 
 训练的losses和评价指标被保存在Tensorboard和`results.txt`log文件。`results.txt`在训练结束后会被可视化为`results.png`
 
@@ -202,7 +202,7 @@ $ python3 train.py --img-size 640 --batch-size 16 --epochs 300 --data ./data/sco
 # 如果你是用远程连接请安装配置Xming: https://blog.csdn.net/akuoma/article/details/82182913
 ```
 
-<img width="1000" align="center" alt="Screen Shot 2020-04-01 at 11 44 26 AM" src="./readmepic/readme2/pic/results.png">
+<img width="1000" align="center" alt="Screen Shot 2020-04-01 at 11 44 26 AM" src="train_batch2.jpg">
 
 #### 7.推断
 
@@ -226,9 +226,9 @@ $ python3 detect.py --source ./inference/images/ --weights weights/yolov5x.pt --
 $ python3 detect.py --source test.mp4 --weights weights/yolov5x.pt --conf 0.4
 ```
 
-<img width="1000" align="center" alt="Screen Shot 2020-04-01 at 11 44 26 AM" src="./readmepic/readme2/pic/t1.jpg">
+<img width="1000" align="center" alt="Screen Shot 2020-04-01 at 11 44 26 AM" src="train_batch0.jpg">
 
-<img width="1000" align="center" alt="Screen Shot 2020-04-01 at 11 44 26 AM" src="./readmepic/readme2/pic/20200514_p6_5_247_one.jpg">
+<img width="1000" align="center" alt="Screen Shot 2020-04-01 at 11 44 26 AM" src="train_batch1.jpg">
 
 #### 8.YOLOv5的TensorRT加速
 
