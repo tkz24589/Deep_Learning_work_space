@@ -12,17 +12,4 @@ This repository is for paper ["RRU-Net: The Ringed Residual U-Net for Image Spli
  - './unet/unet-parts.py': it includes detailed implementations of 'U-Net', 'RU-Net' and 'RRU-Net'
  - 'train.py': you can use it to train your model
  - 'predict.py': you can use it to test
-
-## Citation
-Please add following information if you cite the paper in your publication:
-```shell
-@inproceedings{bi2019rru,
-  title={RRU-Net: The Ringed Residual U-Net for Image Splicing Forgery Detection},
-  author={Bi, Xiuli and Wei, Yang and Xiao, Bin and Li, Weisheng},
-  booktitle={Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition Workshops},
-  pages={0--0},
-  year={2019}
-}
-```
-
-Contact yale yalesaleng@gmail.com for any further information.
+ 
