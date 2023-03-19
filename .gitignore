@@ -1,0 +1,17 @@
+# Ignore all files except .py files
+*.jpg
+*.png
+*.pyc
+*.pkl
+.vscode
+*.prototxt
+*.caffemodel
+*.obj
+*tfevents*
+*.zip*
+*.jar*
+*.7z*
+.rock
+!*.py
+# !*.ipynb
+# !*.md

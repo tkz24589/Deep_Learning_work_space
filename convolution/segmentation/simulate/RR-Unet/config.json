@@ -1,0 +1,21 @@
+{
+  "architectures": [
+    "HFUnetPlusPlus"
+  ],
+  "auto_map": {
+    "AutoConfig": "hf_config.UnetConfig",
+    "AutoModelForImageSegmentation": "hf_model.HFUnetPlusPlus"
+  },
+  "decoder_channels": [
+    1024,
+    512,
+    256,
+    128,
+    64
+  ],
+  "encoder_name": "resnet18",
+  "input_channels": 3,
+  "num_classes": 1,
+  "torch_dtype": "float32",
+  "transformers_version": "4.24.0"
+}
