@@ -1,6 +1,7 @@
 # original net：https://github.com/mouse1998mouse/RRunet
 #将证书中的串改位置进行掩码标记，示例如下
-![效果](result.png)
+![输入](2.jpg)
+![效果](2.png)
 
 ## 依赖
 - Python 3.6 +
