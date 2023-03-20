@@ -92,7 +92,7 @@ def train_net(net,
     optimizer = optim.AdamW(net.parameters(),
                             lr=lr,
                             betas=(0.9, 0.999),
-                            weight_decay=0.05
+                            weight_decay=0.03
                             )
     T_max = 500
     min_lr = 0.000001
