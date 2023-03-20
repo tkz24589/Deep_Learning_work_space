@@ -12,7 +12,11 @@ torch
 <img width=500, src="web.png" />
 
 运行 **draw_server.py**
+
 配置 ./OBJViewer-master/js/OBJLoader.js 的 **ip**
+
 安装 **anywhere**
+
 `cd OBJViewer-master`
+
 `anywhere`
