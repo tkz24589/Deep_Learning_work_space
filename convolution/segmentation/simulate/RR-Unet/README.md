@@ -9,7 +9,7 @@
 - mmcv
 
 ## 运行
- - './model/*': it includes detailed implementations of 'Conv', 'Swin' and 'mvss'
+ - './model_seg/*': it includes detailed implementations of 'ConvNext', 'Swin', 'uperHead'
  - 'train.py': you can use it to train your model
  - 'predict.py': you can use it to test
  ##
