@@ -6,9 +6,10 @@
 - Python 3.6 +
 - PyTorch 1.0 +
 - cudatoolkit 10.0 +
+- mmcv
 
 ## 运行
- - './unet/unet-parts.py': it includes detailed implementations of 'U-Net', 'RU-Net' and 'RRU-Net'
+ - './model/*': it includes detailed implementations of 'Conv', 'Swin' and 'mvss'
  - 'train.py': you can use it to train your model
  - 'predict.py': you can use it to test
  ##
