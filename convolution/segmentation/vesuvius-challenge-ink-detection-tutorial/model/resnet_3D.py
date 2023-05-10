@@ -33,10 +33,6 @@ class ResNetBlock(nn.Module):
         out = self.relu(out)
 
         return out
-class ResNet3D(nn.Module):
-    def __init__(self, block, layers, num_classes=10):
-        super(ResNet3D, self).__init__()
-        self.in_channels = 64
 
         self.conv1 = nn.Conv3d(1, 64, kernel_size=3, stride=1, padding=1, bias=False)
         self.bn1 = nn.BatchNorm3d(64)
@@ -54,7 +50,6 @@ class ResNet3D(nn.Module):
         self.linear2 = nn.LazyLinear(num_classes)
         self.sigmoid = nn.Sigmoid()
 
-    def make_layer(self, block, out_channels, blocks, stride=1):
         layers = []
         layers.append(block(self.in_channels, out_channels, stride))
         self.in_channels = out_channels
