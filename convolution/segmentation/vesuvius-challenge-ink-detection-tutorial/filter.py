@@ -1,9 +1,10 @@
 import cv2
 import numpy as np
 output_list = []
-for i in range(2):
-    mask = cv2.imread(str(i + 1) + ".png", 0) # 读取灰度图像
-    _, mask_binary = cv2.threshold(mask, 150, 255, cv2.THRESH_BINARY)
+THRESHOLD = 0.55
+for index in range(2):
+    mask = cv2.imread(str(index + 1) + ".png", 0) # 读取灰度图像
+    _, mask_binary = cv2.threshold(mask, int(255 * THRESHOLD), 255, cv2.THRESH_BINARY)
     kernel = cv2.getStructuringElement(cv2.MORPH_ELLIPSE, (20, 20)) # 创建一个3x3的椭圆形结构元素
     mask_opened = cv2.morphologyEx(mask_binary, cv2.MORPH_OPEN, kernel)
     num_labels, labels, stats, centroids = cv2.connectedComponentsWithStats(mask_opened)
@@ -38,14 +39,14 @@ for i in range(2):
             continue
         selected_labels.append(label)
 
-    cv2.imwrite("mask_labels.jpg", labels)
+    cv2.imwrite("mask_labels" + str(index + 1) + ".jpg", labels)
     # 提取目标区域
     masks_target = []
     for label in selected_labels:
         mask_target = (labels == label).astype("uint8") * 255
         target_mask += mask_target
 
-    cv2.imwrite("mask_target_org.jpg", target_mask)
+    cv2.imwrite("mask_target_org" + str(index + 1) + ".jpg", target_mask)
     # 进行膨胀和腐蚀操作
     kernel = np.ones((50,50), np.uint8)
     dilated_mask = cv2.dilate(target_mask.astype(np.uint8), kernel, iterations=1)
@@ -55,7 +56,7 @@ for i in range(2):
     result = np.copy(target_mask)
     result[eroded_mask != 0] = 255  # 将腐蚀后的 mask 中值为 0 的部分替换为白色
     # 提取目标区域
-    cv2.imwrite("mask_target.jpg", result)
+    cv2.imwrite("mask_target" + str(index + 1) + ".jpg", result)
     output_list.append(result / 255.)
 
 def rle(output):

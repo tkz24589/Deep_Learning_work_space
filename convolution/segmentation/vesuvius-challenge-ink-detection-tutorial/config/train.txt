@@ -1,0 +1,15 @@
+2080ti 11G
+
+python train.py --valid_id=random --log_dir=result/logs/random/256/ --img_size=128 --bs=32
+
+python train.py --valid_id=random --log_dir=result/logs/random/160/ --img_size=160 --bs=32
+
+python train.py --valid_id=random --log_dir=result/logs/random/192/ --img_size=192 --bs=16
+
+python train.py --valid_id=random --log_dir=result/logs/random/224/ --img_size=224 --bs=16
+
+python train.py --valid_id=random --log_dir=result/logs/random/256/ --img_size=256 --bs=12
+
+python train.py --valid_id=random --log_dir=result/logs/random/288/ --img_size=288 --bs=8
+
+python train.py --valid_id=random --log_dir=result/logs/random/320/ --img_size=320 --bs=8
